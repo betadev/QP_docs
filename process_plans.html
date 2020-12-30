@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Process Plan Setup (Docs - Qik Process)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/additional_styles.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-light navbar-light shadow fixed-top">
+    <a class="navbar-brand text-primary" href="https://www.qikprocess.com">
+      <h5>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+          </svg>
+          Qik Process
+      </h5>
+    </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="index.html" class="text-dark">
+        <h5>User Guide</h5>
+        </a>
+      </li>
+    </ul>
+  </nav>  
+  <br><br><br>
+
+  <div class="container col-sm-8 mt-4">
+
+    <h3 class="text-dark text-center mt-4">Process Plans</h3>
+
+    <p>
+      Each Process Plan is a set of operations with certain specifications that define a particular product model. 
+      Add operations and workstations used across all your different processes before configuring Process Plans.<br><br>
+      Example: Suppose you make tables of 3 different sizes. You would have to create a Process Plan for each different table model-
+      <ul>
+        <li>4 seater table</li>
+        <li>6 seater table</li>
+        <li>8 seater table</li>
+      </ul>
+    </p>
+
+    <b>Adding / Editing Process Plans</b>
+        <ul>
+            <li>
+                Click the Configure Settings button on the app's main screen.
+            </li>
+            <li>
+                Click Setup Process Plans.
+            </li>
+            <li>
+                Enter a Model name for a new Process Plan or select a Model name from the dropdown menu if it already exists and click 'Continue'.
+            </li>
+            <li>
+              Use the '+ Operation' / '- Operation' buttons to add / remove the different Operation Steps required in the process plan.
+            </li>
+            <li>
+              For each step, select an Operation Name and enter it's cycle time (in minutes) [optional] for the particular Model.  
+            </li>
+            <li>
+              Use the '+ Parameter' / '- Parameter' buttons to add / remove the parameters for each Operation Step.              
+            </li>
+            <li>
+              Fill in the parameter info (Check notes below for help) across the different Operation Steps.
+            </li>
+            <li>
+              Click the 'Save Process Plan'.
+            </li>
+        </ul>
+        <b>Each Parameter type has the following fields</b><br>
+        <ul>
+          <li class="mt-1"><i>Parameter Name [Required] : </i>
+            <ul>
+              <li>Enter name / description of the particular operation parameter.<br></li>
+            </ul></li>
+          <li class="mt-1"><i>Parameter Criticality [Required] : </i>
+            <ul>
+              <li>
+                Major criticality - does not allow data entry & process execution to continue until a deviation is allowed.<br>
+              </li>
+              <li>
+                Minor criticality - allows data entry to continue for other operation steps and a deviation can be provided anytime during the process execution.
+              </li>
+              <li>
+                When some parameter value is not within the acceptable range, a 'Deviation Required' warning message is displayed
+                in the 'Basic Info' section and the Operation Step where the parameter is present.<br>  
+              </li>
+            </ul>
+          
+          </li>
+          <li class="mt-1">
+            <i>Parameter Reference Link [Optional] : </i>
+            <ul>
+              <li>
+                URL link for a document, image or anything else that provides descriptive information about the parameter.
+                This information is displayed as a hint while entering parameter data.<br>
+              </li>
+              <li>
+                URL link for documents / images can be obtained by uploading your files to google drive, dropbox, github or any other
+                cloud platform from where you can obtain a public sharing url.<br>
+              </li>
+            </ul>
+          </li>
+          <li class="mt-1">
+            <i>Measurement Method [Optional] : </i>
+            <ul>
+              <li>
+                Enter any device / tool / method name used to measure the parameter. Eg - scale, vernier caliper, visual, etc.
+              </li>
+            </ul>
+          </li>
+          <li class="mt-1">
+            <i>Parameter Types [Required] : </i>
+            <ul>
+              <li>Numeric Range - 
+                <ul>
+                  <li>Specify minimum and maximum numeric values.</li>
+                  <li>Any value beyond specified range will require a deviation.</li>
+                </ul>
+              </li>
+              <li>Option List -
+                <ul>
+                  <li>Specify a list of acceptable & unacceptable values.</li>
+                  <li>Any unacceptable value entered will require a deviation.</li>
+                </ul>
+              </li>
+              <li>Sub-Job -
+                <ul>
+                  <li>Specify model type of a job / sub-component  / part which is to be linked with current job.<br>Example - linking sub components to a main assembly.</li>
+                  <li>Any job / part serial number which belongs to a different model type or is invalid wil require a deviation.</li>
+                </ul>
+              </li>
+              <li>Free Response -
+                <ul>
+                  <li>No specification required.</li>
+                  <li>Allows user to input any value (max 50 characters).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+    <hr>
+    <a href="index.html">
+      <div class = "btn btn-outline-dark justify-content-center mb-4 mt-2">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+      Back to Main Guide
+      </div>
+    </a>
+
+  <br><br>
+  </div>
+
+</body>
+
+<script src="common/jquery.min.js"></script>
+<script src="common/popper.min.js"></script>
+<script src="common/bootstrap.min.js"></script>
+
+</html>
+
+  
